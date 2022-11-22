@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,700&family=Poppins:wght@100;400;500;600&display=swap');
+:root {
+    --fontbold: 'Poppins', sans-serif;
+    --fontbebas: 'Lora', serif;
+}
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--fontbold);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    background-image: url(img/bg-new.png);
+   }
+body::-webkit-scrollbar{
+       display: none;
+      }
+
+/* ===== NAVBAR ===== */
+#navbarNav a {
+    background-image: linear-gradient(
+      to right,
+      #ffffff,
+      #ffffff 50%,
+      rgb(255, 255, 255) 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+ #navbarNav a:before {
+    content: '';
+    background: #ffffff;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+ #navbarNav a:hover {
+   background-position: 0;
+  }
+  
+ #navbarNav a:hover::before {
+    width:100%;
+  }
+
+
+/* ===== OUR SERVICES ===== */
+
+h5 {
+  margin-bottom: 10px;
+}
+
+#title-card {
+  /* display: inline-block; */
+  color: white;
+  text-decoration: none;
+}
+
+#title-card::after { 
+  content: '';
+  display: block;
+  transition: width .5s;
+  margin-top: 10px;
+  width: 25%;
+  height: 2px;
+  background: #f53100;
+}
+
+#title-card:hover::after {
+  width: 100%;
+  /* transition: width .3s; */
+}
+
+#o_s h1{
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+#op1h1-span{
+  color: blue; 
+  margin-left: 1.5rem;
+}
+#cb-p{
+  height: 10rem;
+}
+#o_s{
+  padding-top: 10%;
+}
+#card-os{
+    width: 30rem;  
+    border: 1px solid grey;
+    --c: no-repeat linear-gradient(#0e013d 0 0);
+    background: 
+      var(--c) calc(-100% + var(--p, 0%)) 100% / 50% var(--p, .08em),
+      var(--c) calc( 200% - var(--p, 0%)) 0    / 50% var(--p, .08em);
+    transition: .7s  var(--t, 0s), background-position .7s    calc(.7s   - var(--t, 0s));
+}
+#card-os:hover{
+   
+    transition: all 0.5s;
+    z-index: 2;
+    --p: 100%;
+  --t: .3s;
+}
+#card-os:hover #title-card::after { 
+  content: '';
+  display: block;
+  transition: width .5s;
+  margin-top: 10px;
+  width: 100%;
+  height: 2px;
+  background: #f53100;
+}
+#number{
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+}
+
+
+/* ===== FOOTER ===== */
+.logo {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+}  
+.wrapper .button{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  float: left;
+  margin: 0 5px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 200px;
+}
+.wrapper .button .icon{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:nth-child(1):hover .icon{
+  background: #4267B2;
+}
+.wrapper .button:nth-child(2):hover .icon{
+  background: #1DA1F2;
+}
+.wrapper .button:nth-child(3):hover .icon{
+  background: #E1306C;
+}
+.wrapper .button:nth-child(4):hover .icon{
+  background: #333;
+}
+.wrapper .button:nth-child(5):hover .icon{
+  background: #ff0000;
+}
+.wrapper .button .icon i{
+  font-size: 25px;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon i{
+  color: #fff;
+}
+.wrapper .button span{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:nth-child(1) span{
+  color: #4267B2;
+}
+.wrapper .button:nth-child(2) span{
+  color: #1DA1F2;
+}
+.wrapper .button:nth-child(3) span{
+  color: #E1306C;
+}
+.wrapper .button:nth-child(4) span{
+  color: #333;
+}
+.wrapper .button:nth-child(5) span{
+  color: #ff0000;
+}
+
+.card-os:hover, .card-os > .card-body{
+  color: #ffffff !important;
+}

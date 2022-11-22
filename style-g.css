@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,700&family=Poppins:wght@100;400;500;600&display=swap');
+:root {
+    --fontbold: 'Poppins', sans-serif;
+    --fontbebas: 'Lora', serif;
+}
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--fontbold);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    background-image: url(img/bg-new.png);
+   }
+body::-webkit-scrollbar{
+       display: none;
+      }
+
+/* ===== NAVBAR ===== */
+#navbarNav a {
+    background-image: linear-gradient(
+      to right,
+      #ffffff,
+      #ffffff 50%,
+      rgb(255, 255, 255) 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+ #navbarNav a:before {
+    content: '';
+    background: #ffffff;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+ #navbarNav a:hover {
+   background-position: 0;
+  }
+  
+ #navbarNav a:hover::before {
+    width:100%;
+  }
+
+
+  .container{
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 5rem;
+    margin-top: 10%;
+  }
+  #gallery h1{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  #op1h1-span{
+    color: blue; 
+    margin-left: 1.5rem;
+  }
+  #title{
+    font-size: 4rem;
+    color: white;
+  }
+  .content {
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .content .content-overlay {
+    background: rgba(0,0,0,0.8);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+  }
+  
+  .content:hover .content-overlay{
+    opacity: 5;
+  }
+  
+  .content-image{
+    width: 100%;
+  }
+  
+  .content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  
+  .content:hover .content-details{
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+  
+  .content-details h3{
+    font-family: var(--fontbold);
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+  }
+  
+  .content-details p{
+    color: #fff;
+    font-size: 0.8em;
+  }
+
+
+/* ===== FOOTER ===== */
+.logo {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+}  
+.wrapper .button{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  float: left;
+  margin: 0 5px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 200px;
+}
+.wrapper .button .icon{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:nth-child(1):hover .icon{
+  background: #4267B2;
+}
+.wrapper .button:nth-child(2):hover .icon{
+  background: #1DA1F2;
+}
+.wrapper .button:nth-child(3):hover .icon{
+  background: #E1306C;
+}
+.wrapper .button:nth-child(4):hover .icon{
+  background: #333;
+}
+.wrapper .button:nth-child(5):hover .icon{
+  background: #ff0000;
+}
+.wrapper .button .icon i{
+  font-size: 25px;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon i{
+  color: #fff;
+}
+.wrapper .button span{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:nth-child(1) span{
+  color: #4267B2;
+}
+.wrapper .button:nth-child(2) span{
+  color: #1DA1F2;
+}
+.wrapper .button:nth-child(3) span{
+  color: #E1306C;
+}
+.wrapper .button:nth-child(4) span{
+  color: #333;
+}
+.wrapper .button:nth-child(5) span{
+  color: #ff0000;
+}
+
+.card-os:hover, .card-os > .card-body{
+  color: #ffffff !important;
+}
