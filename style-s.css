@@ -17,6 +17,23 @@ body::-webkit-scrollbar{
       }
 
 /* ===== NAVBAR ===== */
+nav{
+  top: 0; 
+  width: 100vw; 
+  z-index: 99; 
+  background-color: #111644; 
+}
+nav > .container-fluid{
+  padding: .25rem 2rem .25rem 5rem;
+}
+@media only screen and (max-width: 600px) {
+  nav > .container-fluid{
+    padding: .25rem 5rem .25rem 1rem;
+  }
+}
+.navbar-nav{
+  padding: 1rem 3rem;
+}
 #navbarNav a {
     background-image: linear-gradient(
       to right,
@@ -62,7 +79,7 @@ h5 {
 }
 
 #title-card {
-  /* display: inline-block; */
+  font-size: 1.7rem;
   color: white;
   text-decoration: none;
 }
@@ -92,6 +109,7 @@ h5 {
   margin-left: 1.5rem;
 }
 #cb-p{
+  font-size: 1.2rem;
   height: 10rem;
 }
 #o_s{
@@ -126,6 +144,17 @@ h5 {
   position: absolute;
   right: 20px;
   bottom: 15px;
+}
+@media only screen and (max-width: 600px) {
+  #card-os{
+    width: 35rem; 
+  }
+  #cb-p{
+    font-size: 1.35rem;
+  }
+  #title-card {
+    font-size: 2rem;
+  }
 }
 
 
